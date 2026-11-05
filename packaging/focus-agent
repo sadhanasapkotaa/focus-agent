@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# Focus agent launcher. Code lives in /usr/lib/focus-agent; mutable state
+# (config, agent_state.json, logs, browser profiles) lives in the user's data dir.
+set -euo pipefail
+LIB=/usr/lib/focus-agent
+DATA="${XDG_DATA_HOME:-$HOME/.local/share}/focus-agent"
+mkdir -p "$DATA/logs"
+[ -f "$DATA/config.json" ] || cp /etc/focus-agent/config.json "$DATA/config.json"
+cd "$DATA"
+export PYTHONPATH="$LIB${PYTHONPATH:+:$PYTHONPATH}"
+PY="$LIB/venv/bin/python3"; [ -x "$PY" ] || PY=python3
+if [ "${1:-}" = "run" ]; then   # service entry point: auto mode, logged
+  exec "$PY" -u "$LIB/main.py" auto >> "$DATA/logs/auto-$(date +%Y%m%d).log" 2>&1
+fi
+exec "$PY" -u "$LIB/main.py" "$@"

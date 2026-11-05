@@ -1,0 +1,122 @@
+{
+  "allowed_processes": [
+    "python",
+    "python3",
+    "pythonw",
+    "terminal",
+    "gnome-terminal",
+    "konsole",
+    "xterm",
+    "code",
+    "code-insiders",
+    "cursor",
+    "explorer.exe",
+    "Finder",
+    "dockerd",
+    "System",
+    "svchost.exe",
+    "csrss.exe",
+    "wininit.exe",
+    "services.exe",
+    "lsass.exe",
+    "dwm.exe",
+    "WindowServer",
+    "loginwindow",
+    "launchd"
+  ],
+  "kill_processes": [
+    "firefox.exe",
+    "firefox",
+    "msedge.exe",
+    "msedge",
+    "brave",
+    "brave-browser",
+    "AcroRd32.exe",
+    "Acrobat.exe",
+    "SumatraPDF.exe",
+    "evince",
+    "okular",
+    "zathura",
+    "xpdf",
+    "vlc.exe",
+    "vlc",
+    "mpv.exe",
+    "mpv",
+    "wmplayer.exe",
+    "Firefox",
+    "Safari",
+    "Preview",
+    "VLC",
+    "QuickTime Player"
+  ],
+  "playwright_user_data": "./.browser_profiles",
+  "poll_seconds": 2,
+  "guard_enabled": true,
+  "browser": {
+    "executable_path": "/usr/bin/google-chrome-stable",
+    "channel": null,
+    "headless": false
+  },
+  "shows_roots": [
+    "~/Videos"
+  ],
+  "schedule": [
+    {
+      "mode": "dsa",
+      "start": "04:00",
+      "end": "06:00"
+    },
+    {
+      "mode": "wqu",
+      "start": "06:00",
+      "end": "22:00"
+    },
+    {
+      "mode": "revision",
+      "start": "13:00",
+      "end": "13:10"
+    },
+    {
+      "mode": "shows",
+      "start": "00:00",
+      "end": "00:30"
+    }
+  ],
+  "allow_list": {
+    "dsa": [
+      "https://claude.ai/*",
+      "https://*.claude.ai/*",
+      "https://assets-proxy.anthropic.com/*",
+      "https://*.anthropic.com/*",
+      "https://js.hcaptcha.com/*",
+      "https://*.hcaptcha.com/*",
+      "https://accounts.google.com/*",
+      "https://*.googleusercontent.com/*",
+      "https://*.brain.fm/*"
+    ],
+    "wqu": [
+      "https://learn.wqu.edu/*",
+      "https://*.wqu.edu/*",
+      "https://accounts.google.com/*",
+      "https://*.googleusercontent.com/*",
+      "https://*.brain.fm/*"
+    ],
+    "revision": [
+      "https://en.wikipedia.org/*",
+      "https://*.wikipedia.org/*",
+      "https://*.brain.fm/*"
+    ],
+    "shows": [
+      "https://1shows.org/*",
+      "https://enma.lol/*",
+      "https://*.brain.fm/*"
+    ],
+    "coursera": [
+      "https://www.coursera.org/*",
+      "https://accounts.google.com/*",
+      "https://*.googleusercontent.com/*",
+      "https://*.brain.fm/*"
+    ]
+  },
+  "revision_url": "https://en.wikipedia.org/"
+}
